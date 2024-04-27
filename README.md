@@ -181,5 +181,7 @@ if(str.indexOf(str.charAt(i))===str.lastIndexOf(str.charAt(i))){
 ---------reverse string only word---------
 
 let str = 'This is my pen';
+
 let revStr = str.split(' ').reverse().join(' ');
+
 console.log(revStr);
