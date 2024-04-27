@@ -33,12 +33,17 @@ console.log(b); // 10
 3.Multiple 2 number without using \* symbol
 
 function multiply(a,b){
+
 let answer = a;
 
 for(let i=0;i<b-1;i++){
+
 answer += a;
+
 }
+
 return answer;
+
 }
 
 console.log(multiply(2,3))
