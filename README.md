@@ -1,4 +1,4 @@
-<!-- swap 2 numbers without using third variable -->
+---------swap 2 numbers without using third variable---------
 
 let a = 10;
 
@@ -14,7 +14,7 @@ console.log(a); // 20
 
 console.log(b); // 10
 
-<!-- swap 2 numbers with using 3rd variable -->
+---------swap 2 numbers with using 3rd variable-----------
 
 let a = 10;
 
@@ -30,7 +30,7 @@ console.log(a); // 20
 
 console.log(b); // 10
 
-<!-- Multiply 2 number without using \* symbol -->
+---------Multiply 2 number without using \* symbol---------------
 
 function multiply(a,b){
 
@@ -48,7 +48,7 @@ return answer;
 
 console.log(multiply(2,3))
 
-<!-- check armstrong number or not -->
+---------check armstrong number or not-------------
 
 let num = 153;
 
@@ -76,7 +76,7 @@ console.log('not armstrong')
 
 }
 
-<!-- check prime number -->
+----------check prime number-----------
 
 let num = 7;
 
@@ -106,7 +106,7 @@ console.log('not prime');
 
 }
 
-<!-- Print all number between 1 to 20  -->
+---------Print all prime number between 1 to 20----------
 
 for(let i=1;i<=20;i++){
 
@@ -132,7 +132,7 @@ if(isPrime && i > 1) {
 
 }
 
-<!-- Fibonacci series  -->
+---------Fibonacci series-----
 
 let a = 0;
 
@@ -150,7 +150,7 @@ console.log(temp);
 
 }
 
-<!-- Fibonacci series alternative -->
+----Fibonacci series alternative-----
 
 let arr = [1,2];
 
@@ -162,7 +162,7 @@ arr.push(arr[i]+arr[i-1])
 
 console.log(arr);
 
-<!-- first non-repeat string  -->
+-----first non-repeat string----
 
 let str = 'absaadde';
 
