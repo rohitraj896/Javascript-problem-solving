@@ -1,4 +1,4 @@
-1. swap 2 numbers without using third variable
+1.swap 2 numbers without using third variable
 
 let a = 10;
 let b = 20;
@@ -10,7 +10,7 @@ a = a - b;
 console.log(a); // 20
 console.log(b); // 10
 
-2. swap 2 numbers with using 3rd variable
+2.swap 2 numbers with using 3rd variable
 
 let a = 10;
 let b = 20;
