@@ -178,6 +178,28 @@ if(str.indexOf(str.charAt(i))===str.lastIndexOf(str.charAt(i))){
 
 }
 
+-----------reverse string ----------------
+
+let str = 'This is my pen';
+
+let revStr = str.split('').reverse().join('');
+
+console.log(revStr);
+
+-----------reverse string without using inbuild method -----------
+
+let str = 'This is my pen';
+
+let revStr = '';
+
+for(let i=str.length - 1; i>0;i--){
+
+revStr += str[i];
+
+}
+
+console.log(revStr)
+
 ---------reverse string only word---------
 
 let str = 'This is my pen';
@@ -185,3 +207,175 @@ let str = 'This is my pen';
 let revStr = str.split(' ').reverse().join(' ');
 
 console.log(revStr);
+
+--------reverse string word by word -----------
+
+let str = "This is my pen";
+
+let revStr = str.split(' ').map((word)=>{
+
+return word.split('').reverse().join('')
+
+}).join(' ');
+
+console.log(revStr);
+
+-------------remove duplicate string-------------
+
+let str = "This is my pen";
+
+let removeDuplicate = str.split('').filter((element,index,self)=>{
+
+return self.indexOf(element) == index;
+
+}).join('')
+
+console.log(removeDuplicate);
+
+----------------check number is integer or not ------------------
+
+function checkInteger(n){
+
+if(Number.isInteger(n)){
+
+    return true;
+
+} else {
+
+    return false;
+
+}
+
+}
+
+console.log(checkInteger(8));
+
+---------simple callback function example ----------
+
+function callbackFunction (name) {
+
+console.log(name)
+
+}
+
+function outerFunction (callback) {
+
+let name = "Rohit";
+
+callback(name)
+
+}
+
+outerFunction(callbackFunction);
+
+------------number of character count in string---------
+
+let string = "this is my pen";
+
+let letter = 'i';
+
+let count =0;
+
+for(let i=0;i<string.length;i++){
+
+if(string[i] === letter) {
+
+    count++;
+
+}
+
+}
+
+console.log(count);
+
+---------check string is palindrome or not -----------------------
+
+function checkPalindrome(str){
+
+for(let i=0;i<str.length;i++){
+
+    if(str[i] !==str[str.length-1-i]){
+
+      return 'not palindrome'
+
+    }
+
+}
+
+return 'palindrome'
+
+}
+
+console.log(checkPalindrome('madam'));
+
+-------------check palindrome for all element in array ------------------------
+
+function checkPalindrome(str){
+
+for(let i=0;i<str.length;i++) {
+
+    let temp = str[i];
+
+    let isPalindrom = true;
+
+    for(let j=0;j<temp.length-1;j++){
+
+      if(temp[j] !== temp[temp.length-1-j]) {
+
+        isPalindrom = false;
+
+        break;
+      }
+
+    }
+
+    if(isPalindrom) {
+
+      console.log('Palindrom')
+
+    } else {
+
+      console.log('not palindrome')
+
+    }
+
+}
+
+}
+
+checkPalindrome(['mam','madam','pen','ada']);
+
+--------------factorial using recursion ----------------
+
+function factorial(n) {
+
+if(n==0 || n==1) {
+
+    return 1;
+
+} else {
+
+    return n * factorial(n-1)
+
+}
+}
+
+console.log(factorial(4));
+
+-----------factorial without using recursion -----------------
+
+let num = 4;
+
+for(var fact =1 ; num > 1 ; num--) {
+
+fact \*= num;
+
+}
+
+console.log(fact);
+
+------------currying simple example ---------------
+
+let sum = a => b => c => a+b+c;
+
+console.log(sum(4)(3)(2));
