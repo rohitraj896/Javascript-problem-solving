@@ -1034,3 +1034,123 @@ const string = "[{()}]";
 const result = isBalanced(string);
 
 console.log(result)
+
+---------------two sum of array --------------------
+
+function TwoSum(arr,target) {
+
+for(let i=0;i<arr.length-1;i++){
+
+    for(let j=i+1;j<arr.length;j++){
+
+      if(arr[i]+arr[j]===target) {
+
+        return [i,j]
+
+      }
+
+    }
+
+}
+
+return []
+}
+
+const arr = [1,2,3,5];
+const target = 3;
+
+console.log(TwoSum(arr,target));
+
+-----------replace hyphen(-) and underscore(\_) to uppercase ---------
+
+function toCamelCase(str) {
+
+let arr = str.split('');
+
+for(let i=0;i<arr.length;i++) {
+
+    let letter = arr[i];
+
+    if(letter=='-' || letter=='_'){
+
+      arr[i+1] = arr[i+1].toUpperCase();
+
+      arr[i]=""
+
+    }
+
+}
+
+// arr[0].toUpperCase();
+
+return arr.join('')
+
+}
+
+const result = toCamelCase('Oh_my-god');
+
+console.log(result);
+
+----------throttling simple example ----------------
+
+function throttle(func,delay) {
+
+let lastCall =0;
+
+return function(...args) {
+
+     const now = new Date().getTime();
+
+     if(now-lastCall >=delay){
+
+       func.apply(this,args);
+
+       lastCall=now;
+
+     }
+
+}
+
+}
+
+function myFunction () {
+
+console.log('throttle called')
+
+}
+
+const throttleFunction = throttle(myFunction,2000);
+
+throttleFunction();
+
+throttleFunction();
+
+------------debounce simple example------------
+
+function debounce(func,delay) {
+
+let timeoutId;
+
+return function(...args) {
+
+    clearTimeout(timeoutId);
+
+    setTimeout(()=>{
+
+      func.apply(this,args)
+
+    },delay)
+
+}
+
+}
+
+function myFunction () {
+
+console.log('debounced called')
+
+}
+
+const debouncedFunction = debounce(myFunction,2000);
+
+debouncedFunction();
