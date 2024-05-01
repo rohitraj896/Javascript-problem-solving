@@ -379,3 +379,73 @@ console.log(fact);
 let sum = a => b => c => a+b+c;
 
 console.log(sum(4)(3)(2));
+
+-------make empty object---------
+
+let obj = { a: 10, b: 20};
+
+delete obj.a;
+
+console.log(obj);
+
+-----------flatening array nested level ----------------
+
+let arr = [1,2,[3,4],5,6,[7,8,[9,10],11],12];
+
+console.log(arr.flat(Infinity));
+
+--------flattening array without using inbuild method ----------------
+
+function flattenedArray(arr) {
+
+const flattened = [];
+
+for(let item of arr){
+
+    if(Array.isArray(item)){
+
+      flattened.push(...flattenedArray(item))
+
+    }
+
+    else {
+
+      flattened.push(item)
+
+    }
+
+}
+
+return flattened;
+
+}
+
+const arr = [1,2,[3,4,[5,6],7,[8]],9];
+
+console.log(flattenedArray(arr));
+
+-----Find shortest word length in string ---------------
+
+function findShort(str){
+
+let arr = str.split(' ');
+
+let shortest = arr[0];
+
+for(let i=0;i<arr.length;i++){
+
+    if(arr[i].length < shortest.length){
+
+      shortest = arr[i]
+
+    }
+
+}
+
+return shortest.length;
+
+}
+
+const str = 'This is my pen';
+
+console.log(findShort(str));
